@@ -75,10 +75,10 @@ const Button = ({
 // --- Sections ---
 
 const TopBar = () => (
-  <div className="bg-[#050505] border-b border-white/5 px-8 py-3 flex justify-between items-center text-[10px] font-black tracking-[0.2em] uppercase text-zinc-500 hidden md:flex relative z-50">
-    <div className="flex gap-8">
+  <div className="bg-[#050505] border-b border-white/5 px-4 md:px-8 py-3 flex flex-col md:flex-row justify-between items-center text-[10px] font-black tracking-[0.2em] uppercase text-zinc-500 relative z-50 gap-2 md:gap-0">
+    <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8">
       <span className="flex items-center gap-2 hover:text-brand transition-colors cursor-pointer">
-        <Phone size={10} className="text-brand" /> +1 (555) SHINY-SHELL
+        <Phone size={10} className="text-brand" /> +91 98765 43210
       </span>
       <span className="flex items-center gap-2">
         <Clock size={10} className="text-brand" /> 09:00 AM — 08:00 PM
@@ -106,8 +106,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute top-12 left-0 right-0 z-50 px-8 py-8 bg-transparent">
-      <div className="max-w-7xl mx-auto flex justify-between items-center bg-black/40 backdrop-blur-md border border-white/5 px-10 py-5 rounded-sm">
+    <nav className="absolute top-16 md:top-12 left-0 right-0 z-50 px-4 md:px-8 py-4 md:py-8 bg-transparent">
+      <div className="max-w-7xl mx-auto flex justify-between items-center bg-black/40 backdrop-blur-md border border-white/5 px-6 md:px-10 py-4 md:py-5 rounded-sm">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <span className="text-xl md:text-2xl font-display font-black tracking-tighter uppercase text-brand">
@@ -158,7 +158,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-center pt-20">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-center pt-40 md:pt-20">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img 
@@ -266,7 +266,9 @@ const AboutSection = () => (
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 mt-1 block">Expert Stylists</span>
           </div>
         </div>
-        <Button variant="brand" className="h-14 px-12">Experience Luxury</Button>
+        <a href="#contact">
+          <Button variant="brand" className="h-14 px-12">Book Now</Button>
+        </a>
       </motion.div>
     </div>
   </section>
